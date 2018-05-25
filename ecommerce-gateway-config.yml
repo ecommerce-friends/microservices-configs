@@ -16,9 +16,9 @@ eureka:
 security:
   oauth2:
     client:
-      clientId: 465763836153-ekrf4jqi7894ouqsqau2m6kjkclbvhhb.apps.googleusercontent.com
-      clientSecret: 2NwNsIrDD-SwyU-hS6L2iMVV
-      redirectUri: http://localhost:3000/login/gmailCallback
+      client-id: 465763836153-ekrf4jqi7894ouqsqau2m6kjkclbvhhb.apps.googleusercontent.com
+      client-secret: 2NwNsIrDD-SwyU-hS6L2iMVV
+      redirect-uri: http://localhost:3000/login/gmailCallback
       accessTokenUri: https://www.googleapis.com/oauth2/v3/token
       userAuthorizationUri: https://accounts.google.com/o/oauth2/auth
       tokenName: oauth_token
