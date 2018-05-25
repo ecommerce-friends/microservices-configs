@@ -1,0 +1,23 @@
+server:
+  port: 9092
+
+eureka:
+  instance:
+    hostname: localhost
+    port: 9091
+  client:
+    registerWithEureka: true
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server: 
+    wait-time-in-ms-when-sync-empty: 3000
+
+zuul:
+  routes:
+    product-category:
+      path: /product-category/**
+      url: http://localhost:3000/e-commerce/product-category
+    product:
+      path: /product/**
+      url: http://localhost:3000/e-commerce/product
